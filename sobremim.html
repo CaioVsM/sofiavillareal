@@ -13,7 +13,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f9fd;
+            background-color: #ffffff;
             color: #333;
             transition: background-color 0.3s, color 0.3s;
         }
@@ -47,8 +47,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            padding-top: 80px;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -141,6 +139,54 @@
             align-items: center;
             padding: 10px;
         }
+        
+        /* Estilos do Card Profile */
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 80px;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            background-color: #e9e9ed;
+        }
+
+        
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            color: #5a9bd5;
+            margin-bottom: 10px;
+        }
+
+        .profile-card h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .profile-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+
 
         /* Tema escuro */
         @media (prefers-color-scheme: dark) {
@@ -166,6 +212,20 @@
             .logorodape {
                 content: url('./logo3.png');
             }
+            .profile-card {
+                background-color: #2c2c2e;
+                color: #d1d1d1;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+            }
+            .profile-card h1 {
+                color: #a4c8f0;
+            }
+            .profile-card h2 {
+                color: #a4a4a4;
+            }
+            .profile-card p {
+                color: #bdbdbd;
+            }
         }
     </style>
 </head>
@@ -177,7 +237,7 @@
         </a>
     </div>
 
-    <div class="container">
+    <div class="profile-card">
 
         <img src="./perfil.jpeg" alt="Sofia Villa Real" class="profile-img">
         
@@ -188,24 +248,25 @@
             ajudando pacientes a melhorar a saúde bucal e conquistar um sorriso mais saudável e bonito.
         </p>
     </div>
-
-    <div class="carousel">
-        <div class="carousel-images">
-            <img src="./carrocel1.jpeg" alt="Imagem 1">
-            <img src="./carrocel2.jpeg" alt="Imagem 2">
-            <img src="./carrocel3.jpeg" alt="Imagem 3">
-            <img src="./carrocel4.jpeg" alt="Imagem 4">
-            <img src="./carrocel5.jpeg" alt="Imagem 5">
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="./carrocel1.jpeg" alt="Imagem 1">
+                <img src="./carrocel2.jpeg" alt="Imagem 2">
+                <img src="./carrocel3.jpeg" alt="Imagem 3">
+                <img src="./carrocel4.jpeg" alt="Imagem 4">
+                <img src="./carrocel5.jpeg" alt="Imagem 5">
+            </div>
+            <button class="carousel-button left" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
         </div>
-        <button class="carousel-button left" onclick="moveCarousel(-1)">&#10094;</button>
-        <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
+        
+        <div class="rodape">
+            <img src="./logo3.png" alt="Sofia Villa Real" class="logorodape">
+            <p style="font-size: 50%;">© 2024 - VsM - Todos os direitos reservados.</p>
+        </div>
     </div>
-    
-    <div class="rodape">
-        <img src="./logo3.png" alt="Sofia Villa Real" class="logorodape">
-        <p style="font-size: 50%;">© 2024 - VsM - Todos os direitos reservados.</p>
-    </div>
-
+        
     <script>
         let currentIndex = 0;
 

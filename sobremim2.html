@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Dra. Sofia Villa Real</title>
+    <!-- Fonte Great Vibes para o nome como assinatura -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f9fd;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .top-bar a {
+            text-decoration: none;
+            color: #5a9bd5;
+            font-size: 24px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar a:hover {
+            color: #407bbd;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Estilos do Card Profile */
+        .profile-card {
+            background-color: #fff;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            color: #5a9bd5;
+            margin-bottom: 10px;
+        }
+
+        .profile-card h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .profile-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Estilo dos ícones sociais */
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #5a9bd5;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #407bbd;
+        }
+
+        /* Tema escuro */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1c1c1e;
+                color: #d1d1d1;
+            }
+            .profile-card {
+                background-color: #2c2c2e;
+                color: #d1d1d1;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+            }
+            .profile-card h1 {
+                color: #a4c8f0;
+            }
+            .profile-card h2 {
+                color: #a4a4a4;
+            }
+            .profile-card p {
+                color: #bdbdbd;
+            }
+            .social-icons a {
+                color: #a4c8f0;
+            }
+            .social-icons a:hover {
+                color: #92b3e8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <!-- Card Profile -->
+        <div class="profile-card">
+            <img src="./perfil.jpeg" alt="Dra. Sofia Villa Real">
+            <h1>Dra. Sofia Villa Real</h1>
+            <h2>Odontologista</h2>
+            <p>
+                Formada em odontologia pela <span class="highlight">[Nome da Universidade]</span> em [Ano], com mais de [X] anos de experiência
+                ajudando pacientes a melhorar a saúde bucal e alcançar sorrisos mais saudáveis e bonitos.
+            </p>
+
+            <!-- Ícones de redes sociais -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicionar os ícones da FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
