@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mim - Dra. Sofia Villa Real</title>
+    <!-- Fonte Great Vibes para o nome como assinatura -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #E6F7FF;
-            /* Fundo azul bebê */
+            background-color: #f5f9fd;
             color: #333;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .top-bar {
@@ -21,26 +24,25 @@
             left: 0;
             width: 100%;
             background-color: #fff;
-            /* Barra superior branca */
             padding: 10px 20px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            /* Sombra sutil */
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            transition: background-color 0.3s;
         }
 
         .top-bar a {
             text-decoration: none;
-            color: #007bff;
+            color: #5a9bd5;
             font-size: 24px;
             margin-right: 15px;
             transition: color 0.3s ease;
         }
 
         .top-bar a:hover {
-            color: #0056b3;
+            color: #407bbd;
         }
 
         .container {
@@ -55,47 +57,47 @@
         }
 
         .profile-img {
-            width: 200px;
-            /* Tamanho da imagem de perfil */
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 100%;
             object-fit: cover;
             margin-bottom: 20px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            font-size: 32px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+            color: #5a9bd5;
+            font-weight: 600;
             margin-bottom: 10px;
-            color: #007bff;
-            /* Título em azul bebê */
         }
 
         p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.7;
             text-align: justify;
+            max-width: 800px;
         }
 
         .highlight {
-            color: #007bff;
-            /* Azul bebê para destaque */
+            color: #5a9bd5;
             font-weight: bold;
         }
 
         .return-img {
-            margin-top: 2px;
             width: 30px;
             height: 30px;
-
+            margin-top: 6px;
             object-fit: cover;
+            transition: transform 0.3s ease-in-out;
         }
         .return-img:hover {
-
             transform: scale(1.1);
-            transition: transform 0.3s ease-in-out;
             cursor: pointer;
         }
+
         /* Estilos do carrossel */
         .carousel {
             width: 100%;
@@ -132,6 +134,30 @@
         .carousel-button.right {
             right: 10px;
         }
+
+        /* Tema escuro */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1c1c1e;
+                color: #d1d1d1;
+            }
+            .top-bar {
+                background-color: #ffffff;
+                box-shadow: 0px 2px 10px rgb(255, 255, 255);
+            }
+            h1 {
+                color: #a4c8f0;
+            }
+            .highlight {
+                color: #a4c8f0;
+            }
+            /* Alterar logo no tema escuro */
+            .profile-img {
+            
+                content: url('./perfil.jpeg');
+                box-shadow: 0px 2px 2px rgb(250, 249, 249);
+            }
+        }
     </style>
 </head>
 
@@ -143,20 +169,17 @@
     </div>
 
     <div class="container">
-        <!-- Imagem de perfil ou logo -->
+
         <img src="./perfil.jpeg" alt="Sofia Villa Real" class="profile-img">
-
-        <!-- Nome e título -->
+        
         <h1>Dra. Sofia Villa Real</h1>
-
-        <!-- Texto de apresentação -->
         <p>
             Olá! Eu sou a Dra. <span class="highlight">Sofia Villa Real</span>, formada em odontologia pela
             <span class="highlight">[Nome da Universidade]</span> em [Ano]. Tenho mais de [X] anos de experiência,
             ajudando pacientes a melhorar a saúde bucal e conquistar um sorriso mais saudável e bonito.
         </p>
-
     </div>
+
     <div class="carousel">
         <div class="carousel-images">
             <img src="./carrocel1.jpeg" alt="Imagem 1">

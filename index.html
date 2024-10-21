@@ -4,68 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dra. Sofia Villa Real</title>
+    <!-- Fonte Great Vibes para o nome como assinatura -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            margin-top: 100px;
             align-items: center;
             height: 100vh;
-            background-color: #ffffff; /* Fundo azul bebê */
+            background-color: #f0f4f8;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
         }
         h1 {
-            color: #333;
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            color: #5a9bd5;
             margin-bottom: 20px;
         }
         .button {
             display: inline-block;
             margin: 15px;
-            padding: 15px 25px;
+            padding: 15px 30px;
             font-size: 18px;
             color: #fff;
-            background-color: #87CEFA; /* Azul bebê para os botões */
+            background-color: #5a9bd5;
             border: none;
-            border-radius: 5px;
+            border-radius: 40px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para dar destaque */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         }
         .button:hover {
-            background-color: #ffffff; /* Cor de hover um pouco mais escura */
+            background-color: #4a8ac6;
+            transform: translateY(-3px);
         }
         .whatsapp-button {
-            background-color: #25D366; /* Cor verde do WhatsApp */
+            background-color: #25D366;
         }
         .whatsapp-button:hover {
             background-color: #1EBE5A;
         }
-        /* Estilização opcional para deixar os botões mais arredondados */
-        .button, .whatsapp-button {
-            border-radius: 50px;
-        }
         .logo {
-            width: 200px; /* Tamanho da logo, ajuste conforme necessário */
-            margin-bottom: 20px;
+            width: 250px;
+            margin-bottom: 30px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Tema escuro */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1c1c1e; /* Cinza escuro ao invés de preto puro */
+                color: #d1d1d1; /* Texto cinza claro para um contraste confortável */
+            }
+            h1 {
+                color: #a4c8f0; /* Azul suave para o título */
+            }
+            .button {
+                background-color: #3b82f6; /* Azul mais vivo */
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            }
+            .button:hover {
+                background-color: #326ae3;
+            }
+            .whatsapp-button {
+                background-color: #28b67f; /* Verde mais suave no tema escuro */
+            }
+            .whatsapp-button:hover {
+                background-color: #1fa76e;
+            }
+            .logo {
+                content: url('./logo2.png'); /* Logo escura para o tema escuro */
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Imagem da logo -->
     <img src="./logo.png" alt="Sofia Villa Real" class="logo">
-    
-    
-    <!-- Botão para WhatsApp -->
-    <a href="https://wa.me/+558599185556?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." 
-       class="button whatsapp-button">
-        Agende sua consulta
-    </a>
-    
-    <!-- Botão para bio/apresentação -->
-    <a href="./sobremim.html" class="button">
-        Sobre mim
-    </a>
+    <div class="buttons">
+
+        <a href="https://wa.me/+558599185556?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="button whatsapp-button">
+            Agende sua consulta
+        </a>
+        
+        <a href="./sobremim.html" class="button">
+            Sobre mim
+        </a>
+    </div>
 </body>
 </html>
