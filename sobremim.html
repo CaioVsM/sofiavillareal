@@ -131,6 +131,16 @@
         .carousel-button.right {
             right: 10px;
         }
+        .logorodape {
+            width: 15%;
+        }
+        .rodape {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
 
         /* Tema escuro */
         @media (prefers-color-scheme: dark) {
@@ -150,9 +160,11 @@
             }
             /* Alterar logo no tema escuro */
             .profile-img {
-            
                 content: url('./perfil.jpeg');
                 box-shadow: 0px 2px 2px rgb(250, 249, 249);
+            }
+            .logorodape {
+                content: url('./logo3.png');
             }
         }
     </style>
@@ -187,6 +199,11 @@
         </div>
         <button class="carousel-button left" onclick="moveCarousel(-1)">&#10094;</button>
         <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+    
+    <div class="rodape">
+        <img src="./logo3.png" alt="Sofia Villa Real" class="logorodape">
+        <p style="font-size: 50%;">© 2024 - VsM - Todos os direitos reservados.</p>
     </div>
 
     <script>
