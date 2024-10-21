@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Dra. Sofia Villa Real</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E6F7FF;
+            /* Fundo azul bebê */
+            color: #333;
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            /* Barra superior branca */
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            /* Sombra sutil */
+            z-index: 1000;
+        }
+
+        .top-bar a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 24px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar a:hover {
+            color: #0056b3;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 200px;
+            /* Tamanho da imagem de perfil */
+            height: 200px;
+            border-radius: 100%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #007bff;
+            /* Título em azul bebê */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #007bff;
+            /* Azul bebê para destaque */
+            font-weight: bold;
+        }
+        /* Botão de retorno */
+        .return-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #87CEFA;
+            /* Azul bebê */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .return-button:hover {
+            background-color: #7BBCE5;
+            /* Efeito de hover mais escuro */
+        }
+
+        /* Estilos do carrossel */
+        .carousel {
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .carousel-images img {
+            width: 100%;
+            max-width: 900px;
+            height: 400px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-button.left {
+            left: 10px;
+        }
+        .carousel-button.right {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <a href="./index.html" title="Voltar à página principal">
+            &#8592; <!-- Ícone de seta para a esquerda -->
+        </a>
+    </div>
+
+    <div class="container">
+        <!-- Imagem de perfil ou logo -->
+        <img src="./perfil.jpeg" alt="Sofia Villa Real" class="profile-img">
+
+        <!-- Nome e título -->
+        <h1>Dra. Sofia Villa Real</h1>
+
+        <!-- Texto de apresentação -->
+        <p>
+            Olá! Eu sou a Dra. <span class="highlight">Sofia Villa Real</span>, formada em odontologia pela
+            <span class="highlight">[Nome da Universidade]</span> em [Ano]. Tenho mais de [X] anos de experiência,
+            ajudando pacientes a melhorar a saúde bucal e conquistar um sorriso mais saudável e bonito.
+        </p>
+
+    </div>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="./carrocel1.jpeg" alt="Imagem 1">
+            <img src="./carrocel2.jpeg" alt="Imagem 2">
+            <img src="./carrocel3.jpeg" alt="Imagem 3">
+            <img src="./carrocel4.jpeg" alt="Imagem 4">
+            <img src="./carrocel5.jpeg" alt="Imagem 5">
+        </div>
+        <button class="carousel-button left" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveCarousel(direction) {
+            const images = document.querySelector('.carousel-images');
+            const totalImages = images.children.length;
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            images.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+
+</html>
