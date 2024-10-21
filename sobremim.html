@@ -82,27 +82,20 @@
             /* Azul bebê para destaque */
             font-weight: bold;
         }
-        /* Botão de retorno */
-        .return-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: #fff;
-            background-color: #87CEFA;
-            /* Azul bebê */
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
 
-        .return-button:hover {
-            background-color: #7BBCE5;
-            /* Efeito de hover mais escuro */
-        }
+        .return-img {
+            margin-top: 2px;
+            width: 30px;
+            height: 30px;
 
+            object-fit: cover;
+        }
+        .return-img:hover {
+
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
         /* Estilos do carrossel */
         .carousel {
             width: 100%;
@@ -145,7 +138,7 @@
 <body>
     <div class="top-bar">
         <a href="./index.html" title="Voltar à página principal">
-            &#8592; <!-- Ícone de seta para a esquerda -->
+            <img src="./return.png" alt="return" class="return-img">
         </a>
     </div>
 
