@@ -186,6 +186,21 @@
             color: #666;
             line-height: 1.5;
         }
+        .button,
+        .social-icons a {
+            outline: none;
+            /* Remove o contorno azul padrão */
+            text-decoration: none;
+            /* Remove sublinhado em links */
+        }
+
+        .button:focus,
+        .social-icons a:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(90, 155, 213, 0.5);
+            /* Efeito de foco personalizado */
+            border-radius: 40px;
+        }
 
 
         /* Tema escuro */

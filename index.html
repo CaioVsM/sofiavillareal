@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,12 +23,14 @@
             color: #333;
             transition: background-color 0.3s, color 0.3s;
         }
+
         h1 {
             font-family: 'Great Vibes', cursive;
             font-size: 48px;
             color: #5a9bd5;
             margin-bottom: 20px;
         }
+
         .button {
             display: inline-block;
             margin: 15px;
@@ -41,24 +44,30 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         }
+
         .button:hover {
             background-color: #4a8ac6;
             transform: translateY(-3px);
         }
+
         .whatsapp-button {
             background-color: #25D366;
         }
+
         .whatsapp-button:hover {
             background-color: #1EBE5A;
         }
+
         .logo {
             width: 250px;
             margin-bottom: 30px;
         }
+
         .buttons {
             display: flex;
             flex-direction: column;
         }
+
         .rodape {
             display: flex;
             flex-direction: column;
@@ -67,43 +76,73 @@
             padding: 10px;
         }
 
+        .button,
+        .social-icons a {
+            outline: none;
+            /* Remove o contorno azul padrão */
+            text-decoration: none;
+            /* Remove sublinhado em links */
+        }
+
+        .button:focus,
+        .social-icons a:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(90, 155, 213, 0.5);
+            /* Efeito de foco personalizado */
+            border-radius: 40px;
+        }
+
         /* Tema escuro */
         @media (prefers-color-scheme: dark) {
             body {
-                background-color: #1c1c1e; /* Cinza escuro ao invés de preto puro */
-                color: #d1d1d1; /* Texto cinza claro para um contraste confortável */
+                background-color: #1c1c1e;
+                /* Cinza escuro ao invés de preto puro */
+                color: #d1d1d1;
+                /* Texto cinza claro para um contraste confortável */
             }
+
             h1 {
-                color: #a4c8f0; /* Azul suave para o título */
+                color: #a4c8f0;
+                /* Azul suave para o título */
             }
+
             .button {
-                background-color: #3b82f6; /* Azul mais vivo */
+                background-color: #3b82f6;
+                /* Azul mais vivo */
                 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
             }
+
             .button:hover {
                 background-color: #326ae3;
             }
+
             .whatsapp-button {
-                background-color: #28b67f; /* Verde mais suave no tema escuro */
+                background-color: #28b67f;
+                /* Verde mais suave no tema escuro */
             }
+
             .whatsapp-button:hover {
                 background-color: #1fa76e;
             }
+
             .logo {
-                content: url('./logo2.png'); /* Logo escura para o tema escuro */
+                content: url('./logo2.png');
+                /* Logo escura para o tema escuro */
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Imagem da logo -->
     <img src="./logo.png" alt="Sofia Villa Real" class="logo">
     <div class="buttons">
 
-        <a href="https://wa.me/+558599185556?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="button whatsapp-button">
+        <a href="https://wa.me/+558599185556?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
+            class="button whatsapp-button">
             Agende sua consulta
         </a>
-        
+
         <a href="./sobremim.html" class="button">
             Sobre mim
         </a>
@@ -112,4 +151,5 @@
         <p style="font-size: 50%;">© 2024 - VsM - Todos os direitos reservados.</p>
     </div>
 </body>
+
 </html>
